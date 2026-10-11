@@ -1,70 +1,49 @@
-# Morning Routine — Official Landing Page
+# Morning Routine — Official Showcase & Interactive Simulator
 
-The official showcase website and interactive web simulator for the **Morning Routine** Android application.
+> An Excalidraw-style routine diagram that lives directly on your Android lockscreen. Wake your screen, hold to complete tasks, swipe up to unlock.
 
-Hosted live on GitHub Pages:  
-**[https://del0x3.github.io/morning-routine-site/](https://del0x3.github.io/morning-routine-site/)**
-
----
-
-## Overview
-
-This repository contains the static source code for the product landing page. The site introduces the core philosophy of Morning Routine, provides a live in-browser touch simulator, breaks down the lockscreen interaction flow, and hosts links to official release builds.
-
-Associated Android Application Repository:  
-**[github.com/del0x3/morning-plan](https://github.com/del0x3/morning-plan)**
+**[Try the Interactive Simulator Live](https://del0x3.github.io/morning-routine-site/)** &middot; **[Download Release APK (v1.1.1)](https://github.com/del0x3/morning-plan/releases/latest/download/app-release.apk)** &middot; **[Android Source Code](https://github.com/del0x3/morning-plan)**
 
 ---
 
-## Features
+## What is This?
 
-1. **Interactive In-Browser Simulator:**
-   - A desktop and mobile-responsive smartphone mockup that runs the Excalidraw routine flowchart in pure web technologies.
-   - Visitors can press and hold cards (`Wake Up`, `Wash Up`, `Drink Water`, `Step Outside`) to experience the animated 650ms fill gesture before locking into a checkmark (`✓`).
-   - Long-press to reset tasks back to unchecked.
-   - Hand-drawn callout arrows guide visitors to interact with the mockup.
+Every morning, you check your phone for the time and get immediately hijacked by unread messages, social feeds, and notification badges.
 
-2. **Visual Step-by-Step Walkthrough:**
-   - Detailed breakdown of the morning routine sequence:
-     - 01: Display turns on (clean canvas overriding system clock and notifications).
-     - 02: Hold-to-confirm gesture (accidental tap protection).
-     - 03: Decision branching with optional pathways.
-     - 04: Swipe-to-unlock directly to Samsung One UI PIN or fingerprint scanner.
-
-3. **High-Resolution Device Comparison:**
-   - Direct visual comparison between the Gemini concept board and real screen captures from a physical Samsung Galaxy running Android 15 / 14.
-
-4. **Technical Architecture Overview:**
-   - Explains Android Keyguard Window APIs (`showWhenLocked`, `turnScreenOn`), Compose Canvas rendering, and strict offline zero-telemetry architecture.
-
-5. **Direct APK Downloads:**
-   - One-click download links connecting directly to GitHub Releases.
+**Morning Routine** fixes this at the operating system level:
+- It replaces your system lockscreen clock with a calm, hand-drawn routine flowchart.
+- No unlocking required. No apps to open. No distractions.
+- Cards require a deliberate 650ms hold-to-confirm gesture so sleepy misclicks are ignored.
+- Swipe up when you are done to seamlessly access your normal phone.
 
 ---
 
-## Technical Stack
+## Visual Comparison
 
-- Semantic HTML5
-- Tailwind CSS (responsive layout and utilities)
-- Typography: Inter (clean UI) + Kalam (hand-drawn felt marker script)
-- Vanilla JavaScript (zero framework dependencies, lightweight hold-and-fill event listeners)
-- GitHub Pages (static edge CDN deployment)
+| Gemini Concept Board | Clean Lockscreen (Device) | Completed Tasks (Device) |
+| :---: | :---: | :---: |
+| ![Gemini Concept](assets/reference_gemini.jpg) | ![Clean Lockscreen](assets/screenshot_fresh.png) | ![Completed Tasks](assets/screenshot_checked.png) |
 
 ---
 
-## Local Development
+## Live In-Browser Simulator
 
-Preview locally using any static web server:
+Before installing the APK on your phone, you can test the interaction directly on the website:
 
-```bash
-# Python 3
-python -m http.server 8000
+**[Open Live Simulator](https://del0x3.github.io/morning-routine-site/)**
 
-# Node.js
-npx serve .
-```
+- Click and **HOLD** down on any task card (`Wake Up`, `Wash Up`, `Drink Water`, `Step Outside`).
+- Watch the fluid green fill animation snap into a checkmark (`✓`).
+- Long-press any completed card to reset it.
 
-Open `http://localhost:8000` in your web browser.
+---
+
+## Get the App
+
+The Android application is completely free, open-source, and offline (zero network permissions, zero telemetry).
+
+- **Direct Download:** [app-release.apk (v1.1.1)](https://github.com/del0x3/morning-plan/releases/latest/download/app-release.apk)
+- **Source Code & Issue Tracker:** [github.com/del0x3/morning-plan](https://github.com/del0x3/morning-plan)
 
 ---
 

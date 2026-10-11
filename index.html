@@ -55,10 +55,10 @@
     }
   </style>
 </head>
-<body class="bg-[#0D1117] text-[#E6EDF3] font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-500 selection:text-white">
+<body class="bg-[#0B0F14] text-[#E6EDF3] font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-500 selection:text-white">
 
   <!-- Header -->
-  <header class="border-b border-[#30363D] bg-[#161B22]/80 backdrop-blur sticky top-0 z-50">
+  <header class="border-b border-[#21262D] bg-[#161B22]/85 backdrop-blur sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-300 via-sky-300 to-emerald-300 border-2 border-black flex items-center justify-center font-hand font-bold text-black text-xl shadow-sm">
@@ -79,23 +79,23 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Live Simulator -->
   <main class="flex-1">
-    <div class="max-w-6xl mx-auto px-6 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="max-w-6xl mx-auto px-6 py-14 lg:py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       
-      <!-- Left Column: Pitch -->
+      <!-- Left Column: Problem & Pitch -->
       <div class="lg:col-span-7 space-y-6">
         <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#161B22] border border-[#30363D] text-xs text-gray-400 font-medium">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>Zero friction &middot; Pure Excalidraw aesthetics &middot; 100% Offline</span>
+          <span>Zero friction &middot; Excalidraw styling &middot; 100% Offline</span>
         </div>
 
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
-          Your morning routine, right on your <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-sky-300 to-emerald-300 font-hand font-normal">lockscreen.</span>
+          Complete your morning routine <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-sky-300 to-emerald-300 font-hand font-normal">before unlocking.</span>
         </h1>
 
         <p class="text-lg text-gray-400 max-w-xl leading-relaxed">
-          No unlocking, no opening apps, no notification spam. Wake your Samsung screen, hold a task card to mark it done, and swipe up when ready.
+          The moment you touch your phone in the morning, social notifications fight for your dopamine. <strong class="text-gray-200">Morning Routine</strong> replaces your system lockscreen clock with a clear, hand-drawn flowchart. Hold to complete tasks, swipe up when you're done.
         </p>
 
         <div class="flex flex-wrap gap-4 pt-2">
@@ -110,36 +110,36 @@
 
         <div class="grid grid-cols-3 gap-4 pt-6 border-t border-[#30363D]/60 max-w-lg text-sm">
           <div>
-            <div class="text-gray-500 text-xs uppercase tracking-wider font-semibold">Stack</div>
+            <div class="text-gray-500 text-xs uppercase tracking-wider font-semibold">Engine</div>
             <div class="text-gray-200 font-medium mt-1">Compose + Kotlin</div>
+          </div>
+          <div>
+            <div class="text-gray-500 text-xs uppercase tracking-wider font-semibold">Security</div>
+            <div class="text-gray-200 font-medium mt-1">Keyguard Native</div>
           </div>
           <div>
             <div class="text-gray-500 text-xs uppercase tracking-wider font-semibold">Privacy</div>
             <div class="text-gray-200 font-medium mt-1">Zero Telemetry</div>
           </div>
-          <div>
-            <div class="text-gray-500 text-xs uppercase tracking-wider font-semibold">License</div>
-            <div class="text-gray-200 font-medium mt-1">MIT Open Source</div>
-          </div>
         </div>
       </div>
 
-      <!-- Right Column: Interactive Phone Simulator -->
-      <div class="lg:col-span-5 flex justify-center">
+      <!-- Right Column: Interactive Simulator -->
+      <div class="lg:col-span-5 flex flex-col items-center">
         <div class="relative w-[340px] h-[680px] bg-black rounded-[48px] p-3 shadow-2xl border-4 border-[#30363D] shadow-emerald-500/10">
           
-          <!-- Phone Speaker & Camera Notch -->
+          <!-- Notch -->
           <div class="absolute top-6 left-1/2 -translate-x-1/2 w-28 h-4 bg-black rounded-full z-20 flex items-center justify-center">
             <div class="w-3 h-3 rounded-full bg-[#161B22]"></div>
           </div>
 
-          <!-- Phone Screen Container -->
+          <!-- Phone Screen -->
           <div id="phone-screen" class="w-full h-full bg-[#FAF3E8] rounded-[38px] overflow-hidden flex flex-col justify-between p-6 relative select-none">
             
             <!-- Screen Header -->
             <div class="pt-8 text-center">
               <h2 class="font-hand font-bold text-3xl text-[#231F20] tracking-tight">Morning Routine</h2>
-              <p class="text-[11px] text-[#6B655E] mt-0.5">Press &amp; hold card to complete</p>
+              <p class="text-[11px] text-[#6B655E] mt-0.5 font-medium">Try holding any card below &darr;</p>
             </div>
 
             <!-- Flowchart SVG Canvas -->
@@ -157,19 +157,14 @@
                 <path d="M 72 68 L 72 136" stroke="#6B655E" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
                 
                 <!-- 2. Wash Up -> Drink Water (Angled) -->
-                <path d="M 135 160 L 175 132" stroke="#6B655E" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+                <path d="M 135 160 L 175 136" stroke="#6B655E" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
                 
                 <!-- 3. Wash Up -> Step Outside (Left Diagonal) -->
-                <path d="M 115 195 L 125 305" stroke="#6B655E" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+                <path d="M 112 195 L 126 304" stroke="#6B655E" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
 
                 <!-- 4. Drink Water -> Step Outside (Right Diagonal - Symmetrical) -->
-                <path d="M 205 178 L 185 305" stroke="#6B655E" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+                <path d="M 204 178 L 184 304" stroke="#6B655E" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
               </svg>
-
-              <!-- Optional label -->
-              <div class="absolute top-[124px] left-[134px] font-hand text-xs text-[#6B655E] -rotate-12 pointer-events-none font-medium">
-                optional
-              </div>
 
               <!-- 1. Wake Up Card -->
               <div id="card-wake" data-id="wake" class="sketch-card absolute top-2 left-2 w-[125px] h-[64px] bg-[#FDE483] border-[2.8px] border-[#231F20] rounded-2xl flex items-center justify-center cursor-pointer shadow-sm">
@@ -190,7 +185,7 @@
               </div>
 
               <!-- 3. Drink Water Card -->
-              <div id="card-water" data-id="water" class="sketch-card absolute top-[110px] right-2 w-[116px] h-[64px] bg-[#A5D4FE] border-[2.8px] border-[#231F20] rounded-2xl flex items-center justify-center cursor-pointer shadow-sm text-center">
+              <div id="card-water" data-id="water" class="sketch-card absolute top-[114px] right-2 w-[116px] h-[64px] bg-[#A5D4FE] border-[2.8px] border-[#231F20] rounded-2xl flex items-center justify-center cursor-pointer shadow-sm text-center">
                 <div class="progress-bar" style="width: 0%"></div>
                 <div class="relative z-10 flex items-center space-x-1 font-hand font-bold text-base leading-tight text-[#231F20]">
                   <span>Drink<br>Water</span>
@@ -207,81 +202,232 @@
                 </div>
               </div>
 
+              <!-- Optional label on top -->
+              <div class="absolute top-[126px] left-[132px] font-hand text-xs text-[#6B655E] -rotate-12 pointer-events-none font-medium z-20">
+                optional
+              </div>
+
             </div>
 
-            <!-- Screen Footer Hint -->
+            <!-- Footer Hint -->
             <div class="pb-4 text-center font-hand text-xs text-[#888279]">
               Swipe up to unlock &uarr;
             </div>
 
           </div>
         </div>
+        <p class="text-xs text-gray-500 mt-3 text-center">Live interactive simulator &middot; Hold to fill, long-press to reset</p>
       </div>
 
     </div>
 
-    <!-- Features Section -->
-    <section class="border-t border-[#30363D] bg-[#161B22]/50 py-20">
+    <!-- How the Application Works Section -->
+    <section class="border-t border-[#21262D] bg-[#161B22]/60 py-20">
       <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">
-          Designed for morning clarity
-        </h2>
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <div class="text-emerald-400 font-semibold text-xs tracking-wider uppercase">How It Works</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+            Designed to protect your focus
+          </h2>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Standard lockscreens immediately expose you to unread messages and notifications. Morning Routine intercepts your morning wake-up with an intentional physical protocol.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          
+          <div class="p-6 rounded-2xl bg-[#0D1117] border border-[#30363D] flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-amber-400/10 text-amber-300 border border-amber-400/20 flex items-center justify-center font-bold mb-4 font-mono">
+                01
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">Display Turns On</h3>
+              <p class="text-xs text-gray-400 leading-relaxed">
+                When you press the power button or double tap your Samsung screen, <code class="text-amber-300">LockscreenService</code> activates and renders the routine overlay on top of the keyguard.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#21262D] text-xs text-gray-500">
+              No clock, zero notification distraction
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#0D1117] border border-[#30363D] flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-sky-400/10 text-sky-300 border border-sky-400/20 flex items-center justify-center font-bold mb-4 font-mono">
+                02
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">Hold to Confirm</h3>
+              <p class="text-xs text-gray-400 leading-relaxed">
+                Accidental taps while half-asleep are ignored. Holding any task card for 650ms smoothly fills it with green and gives a haptic pulse before locking in the checkmark <span class="font-hand font-bold text-emerald-400">✓</span>.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#21262D] text-xs text-gray-500">
+              Intentional gesture physics
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#0D1117] border border-[#30363D] flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-teal-400/10 text-teal-300 border border-teal-400/20 flex items-center justify-center font-bold mb-4 font-mono">
+                03
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">Branching Logic</h3>
+              <p class="text-xs text-gray-400 leading-relaxed">
+                The diagram outlines flexible paths: after washing up, you can take the direct path outside or follow the <span class="font-hand text-gray-300 font-bold">optional</span> path to drink a glass of water first.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#21262D] text-xs text-gray-500">
+              Structured daily habits
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#0D1117] border border-[#30363D] flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 flex items-center justify-center font-bold mb-4 font-mono">
+                04
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">Swipe to Unlock</h3>
+              <p class="text-xs text-gray-400 leading-relaxed">
+                When you are ready to use your phone, a natural upward swipe smoothly dismisses the overlay and immediately triggers your standard One UI PIN or fingerprint sensor.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#21262D] text-xs text-gray-500">
+              Zero obstacle to device security
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Screenshots Comparison Section -->
+    <section class="py-20 border-t border-[#21262D]">
+      <div class="max-w-6xl mx-auto px-6">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <div class="text-sky-400 font-semibold text-xs tracking-wider uppercase">Visual Proof</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+            From sketch concept to real device
+          </h2>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Side-by-side comparison between the original Gemini sketch board and the native Jetpack Compose lockscreen running on a physical Samsung Galaxy.
+          </p>
+        </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="p-6 rounded-2xl bg-[#161B22] border border-[#30363D]">
-            <div class="w-10 h-10 rounded-xl bg-amber-400/10 text-amber-400 border border-amber-400/20 flex items-center justify-center font-bold mb-4">
-              01
+          
+          <!-- Image 1 -->
+          <div class="bg-[#161B22] rounded-2xl border border-[#30363D] p-4 flex flex-col items-center">
+            <div class="w-full text-center pb-3 border-b border-[#21262D] mb-4">
+              <span class="text-xs font-semibold text-amber-300 uppercase tracking-wide">01 &middot; Gemini Reference Board</span>
             </div>
-            <h3 class="text-lg font-semibold text-white mb-2">Show When Locked</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
-              Uses native Android Keyguard APIs to render directly above your lockscreen. The moment your display turns on, your diagram is ready.
-            </p>
+            <div class="w-full aspect-[9/19] rounded-xl overflow-hidden border border-[#30363D] bg-black">
+              <img src="assets/reference_gemini.jpg" alt="Gemini Reference Board" class="w-full h-full object-cover">
+            </div>
+            <p class="text-xs text-gray-400 mt-4 text-center">Original hand-drawn design prompt inspired by Excalidraw</p>
           </div>
 
-          <div class="p-6 rounded-2xl bg-[#161B22] border border-[#30363D]">
-            <div class="w-10 h-10 rounded-xl bg-sky-400/10 text-sky-400 border border-sky-400/20 flex items-center justify-center font-bold mb-4">
-              02
+          <!-- Image 2 -->
+          <div class="bg-[#161B22] rounded-2xl border border-[#30363D] p-4 flex flex-col items-center">
+            <div class="w-full text-center pb-3 border-b border-[#21262D] mb-4">
+              <span class="text-xs font-semibold text-sky-300 uppercase tracking-wide">02 &middot; Clean Lockscreen (Device)</span>
             </div>
-            <h3 class="text-lg font-semibold text-white mb-2">Hold-to-Confirm Physics</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
-              When waking up half-asleep, single taps are easily misclicked. Holding the card for 650ms smoothly fills it with green before locking the checkmark.
-            </p>
+            <div class="w-full aspect-[9/19] rounded-xl overflow-hidden border border-[#30363D] bg-black">
+              <img src="assets/screenshot_fresh.png" alt="Clean Lockscreen on Device" class="w-full h-full object-cover">
+            </div>
+            <p class="text-xs text-gray-400 mt-4 text-center">Physical Samsung Galaxy screen capture with fresh tasks</p>
           </div>
 
-          <div class="p-6 rounded-2xl bg-[#161B22] border border-[#30363D]">
-            <div class="w-10 h-10 rounded-xl bg-emerald-400/10 text-emerald-400 border border-emerald-400/20 flex items-center justify-center font-bold mb-4">
-              03
+          <!-- Image 3 -->
+          <div class="bg-[#161B22] rounded-2xl border border-[#30363D] p-4 flex flex-col items-center">
+            <div class="w-full text-center pb-3 border-b border-[#21262D] mb-4">
+              <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wide">03 &middot; Completed Routine (Device)</span>
             </div>
-            <h3 class="text-lg font-semibold text-white mb-2">Zero Distractions</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
-              Replaces Samsung lockscreen clock, badges, and notification alerts with a calm paper-like canvas. Swipe up anytime to proceed to your regular PIN.
-            </p>
+            <div class="w-full aspect-[9/19] rounded-xl overflow-hidden border border-[#30363D] bg-black">
+              <img src="assets/screenshot_checked.png" alt="Completed Tasks on Device" class="w-full h-full object-cover">
+            </div>
+            <p class="text-xs text-gray-400 mt-4 text-center">All 4 tasks completed with checkmarks and green fill</p>
           </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Technical Architecture Section -->
+    <section class="border-t border-[#21262D] bg-[#161B22]/40 py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          <div class="space-y-6">
+            <div class="text-emerald-400 font-semibold text-xs tracking-wider uppercase">Native Android Engineering</div>
+            <h2 class="text-3xl font-extrabold text-white leading-tight">
+              Built for speed, reliability, and zero battery drain
+            </h2>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Instead of relying on heavy third-party lockscreen replacements that break system security, Morning Routine uses Android's native Keyguard Window APIs. Your phone remains 100% encrypted and protected by Samsung Knox.
+            </p>
+
+            <ul class="space-y-4 text-sm text-gray-300">
+              <li class="flex items-start space-x-3">
+                <span class="font-hand font-bold text-emerald-400 text-lg">✓</span>
+                <span><strong class="text-white">Immersive Window Flags:</strong> Covers One UI lockscreen clock, widgets, and status icons cleanly.</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="font-hand font-bold text-emerald-400 text-lg">✓</span>
+                <span><strong class="text-white">Hardware Canvas Rendering:</strong> Arrows and sketchy borders drawn directly on hardware-accelerated Compose Canvas.</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="font-hand font-bold text-emerald-400 text-lg">✓</span>
+                <span><strong class="text-white">Strictly Offline:</strong> No network permissions requested in AndroidManifest. Zero analytics or background trackers.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-[#0D1117] rounded-2xl border border-[#30363D] p-6 font-mono text-xs text-gray-300 space-y-4 overflow-x-auto shadow-xl">
+            <div class="text-gray-500">// LockscreenActivity.kt &mdash; Native Keyguard setup</div>
+            <div class="text-emerald-400">setShowWhenLocked(true)</div>
+            <div class="text-emerald-400">setTurnScreenOn(true)</div>
+            <div class="text-gray-400">window.addFlags(</div>
+            <div class="pl-4 text-sky-300">FLAG_SHOW_WHEN_LOCKED or</div>
+            <div class="pl-4 text-sky-300">FLAG_TURN_SCREEN_ON or</div>
+            <div class="pl-4 text-sky-300">FLAG_FULLSCREEN or</div>
+            <div class="pl-4 text-sky-300">FLAG_LAYOUT_NO_LIMITS</div>
+            <div class="text-gray-400">)</div>
+            <div class="text-gray-500">// Hide system status & navigation bars</div>
+            <div class="text-amber-300">WindowCompat.setDecorFitsSystemWindows(window, false)</div>
+            <div class="text-amber-300">insetsController.hide(WindowInsetsCompat.Type.systemBars())</div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Comparison & Credits -->
-    <section class="py-20 border-t border-[#30363D]">
-      <div class="max-w-6xl mx-auto px-6 text-center space-y-6">
-        <h2 class="text-2xl sm:text-3xl font-bold text-white">Open Source &amp; Attribution</h2>
-        <p class="text-gray-400 max-w-2xl mx-auto text-sm leading-relaxed">
-          The concept diagram was generated with Gemini, inspired by the minimalist hand-drawn design language of Excalidraw, and brought to life natively with Jetpack Compose.
+    <!-- Call to Action -->
+    <section class="py-20 border-t border-[#21262D] text-center bg-gradient-to-b from-transparent to-[#161B22]/80">
+      <div class="max-w-4xl mx-auto px-6 space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+          Take back your morning clarity today.
+        </h2>
+        <p class="text-gray-400 text-sm max-w-xl mx-auto leading-relaxed">
+          Prebuilt signed APK available on GitHub. Open source under the MIT License.
         </p>
-        <div class="pt-4 flex justify-center space-x-4">
-          <a href="https://github.com/del0x3/morning-plan" target="_blank" class="px-5 py-2.5 rounded-lg bg-[#21262D] hover:bg-[#30363D] text-white text-sm font-semibold transition border border-[#30363D]">
+        <div class="pt-2 flex flex-wrap justify-center gap-4">
+          <a href="https://github.com/del0x3/morning-plan/releases/latest/download/app-release.apk" class="px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-extrabold transition shadow-xl shadow-emerald-500/20 text-sm">
+            Download Release APK (v1.1.1)
+          </a>
+          <a href="https://github.com/del0x3/morning-plan" target="_blank" class="px-6 py-4 rounded-xl bg-[#21262D] hover:bg-[#30363D] text-white font-semibold transition border border-[#30363D] text-sm">
             Star on GitHub
           </a>
-          <a href="https://github.com/del0x3/morning-plan/releases" target="_blank" class="px-5 py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-gray-950 text-sm font-bold transition">
-            Browse Releases
-          </a>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-[#30363D] bg-[#161B22] py-8 text-center text-xs text-gray-500">
+  <footer class="border-t border-[#21262D] bg-[#0D1117] py-8 text-center text-xs text-gray-500">
     <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
       <div>&copy; 2026 Morning Routine &middot; Released under the MIT License</div>
       <div class="flex space-x-6">
@@ -310,7 +456,7 @@
             progress = 0;
             bar.style.width = '0%';
             checkmark.classList.add('hidden');
-          }, 800);
+          }, 700);
           return;
         }
 
